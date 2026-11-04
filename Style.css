@@ -1402,3 +1402,454 @@ section[id] {
         height: 200px;
     }
 }
+
+
+/* =====================================
+   RESPONSIVE FIX - TABLET & MOBILE
+   Letakkan di bagian paling bawah
+===================================== */
+
+/* Mencegah elemen melebar keluar layar */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container,
+.hero-content,
+.about-text,
+.timeline-content,
+.experience-content,
+.project-content,
+.organization-card {
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .nav-menu {
+        top: 68px;
+        max-height: calc(100dvh - 68px);
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 5vw, 45px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .floating-card {
+        left: -15px;
+    }
+
+    .experience-top {
+        flex-wrap: wrap;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+    .organization-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        top: 65px;
+        padding: 12px 5% 20px;
+        max-height: calc(100dvh - 65px);
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 11px 0;
+    }
+
+    /* BERANDA */
+    .hero {
+        min-height: auto;
+        padding-top: 115px;
+        padding-bottom: 65px;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        padding: 7px 12px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        letter-spacing: -1.5px;
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        width: min(260px, 85%);
+    }
+
+    .floating-card {
+        left: -12px;
+        bottom: 15px;
+        padding: 10px 12px;
+    }
+
+    .floating-card strong {
+        font-size: 11px;
+    }
+
+    .floating-card small {
+        font-size: 9px;
+    }
+
+    .decor-circle {
+        width: 140px;
+        height: 140px;
+        right: -20px;
+    }
+
+    /* JUDUL SECTION */
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    /* TENTANG */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-text h3 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 13px;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .highlight-card {
+        min-height: 125px;
+        padding: 15px 12px;
+    }
+
+    .highlight-card h4 {
+        font-size: 13px;
+    }
+
+    .highlight-card p {
+        font-size: 11px;
+    }
+
+    /* PENDIDIKAN */
+    .timeline-item {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .timeline-logo {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+    }
+
+    .timeline-content h3 {
+        font-size: 17px;
+    }
+
+    .timeline-content h4 {
+        font-size: 13px;
+    }
+
+    .timeline-content p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    /* PENGALAMAN */
+    .experience-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .experience-logo {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+    }
+
+    .experience-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .experience-content h3 {
+        font-size: 17px;
+        overflow-wrap: anywhere;
+    }
+
+    .experience-content > p,
+    .experience-points li {
+        font-size: 12px;
+    }
+
+    .experience-date {
+        font-size: 10px;
+    }
+
+    /* KETERAMPILAN */
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .skill-card {
+        padding: 17px 13px;
+    }
+
+    .skill-card h3 {
+        font-size: 14px;
+    }
+
+    .skill-card p {
+        font-size: 11px;
+    }
+
+    /* ORGANISASI */
+    .organization-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .organization-card {
+        padding: 22px;
+    }
+
+    /* PROYEK */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-visual {
+        min-height: 135px;
+    }
+
+    .project-content {
+        padding: 19px;
+    }
+
+    .project-content h3 {
+        font-size: 17px;
+    }
+
+    .project-content > p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    /* SERTIFIKAT */
+    .certificate-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .certificate-image {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .certificate-info {
+        padding: 16px;
+    }
+
+    .certificate-info h3 {
+        font-size: 15px;
+    }
+
+    /* MODAL PDF */
+    .certificate-modal {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .certificate-modal-content {
+        width: 100%;
+        height: 100dvh;
+        max-width: none;
+        border-radius: 0;
+    }
+
+    .certificate-modal-header {
+        padding: 13px 17px;
+    }
+
+    .certificate-modal-header h3 {
+        font-size: 14px;
+    }
+
+    #certificateViewer {
+        min-height: 0;
+    }
+
+    /* KONTAK */
+    .contact-box {
+        padding: 28px 17px;
+    }
+
+    .contact-box h3 {
+        font-size: 22px;
+    }
+
+    .contact-box > p {
+        font-size: 12px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 380px) {
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about-highlights,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .experience-card,
+    .organization-card,
+    .timeline-item {
+        padding: 17px;
+    }
+}
+
